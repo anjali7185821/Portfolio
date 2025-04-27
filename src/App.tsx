@@ -3,6 +3,7 @@ import Homepage from './components/homepage/Homepage';
 import AboutPage from './components/aboutpage/AboutPage';
 import ContactPage from './components/contactpage/Contactpage';
 import JourneyPage from './components/jouneypage/Journeypage';
+import ProjectPage from './components/projectpage/ProjectPage'; 
 
 function App() {
  
@@ -15,6 +16,7 @@ function App() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/journey" element={<JourneyPage />} />
+        <Route path="/projects" element={<ProjectPage />} />
       </Routes>
     </Router>
   )
