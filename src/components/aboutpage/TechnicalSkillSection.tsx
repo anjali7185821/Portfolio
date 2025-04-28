@@ -68,8 +68,8 @@ const TechnicalSkills = () => {
 
   const toolsAndOthers = [
     { name: 'Git', level: 'Advanced', icon: 'git' },
-    { name: 'Docker', level: 'Intermediate', icon: 'docker' },
-    { name: 'AWS', level: 'Intermediate', icon: 'cloud' },
+    { name: 'Docker', level: 'Basic', icon: 'docker' },
+    { name: 'AWS', level: 'Basic', icon: 'cloud' },
     { name: 'Agile', level: 'Advanced', icon: 'list-check' },
   ];
 

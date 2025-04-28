@@ -72,7 +72,7 @@ const JourneySection: React.FC = () => {
   };
 
   const headingStyle = {
-    color: '#6c2bd9', // Highlight color
+    color: '#a259ff', // Highlight color
     marginBottom: '50px',
     fontSize: '2.5rem',
     fontWeight: 'bold',
@@ -104,7 +104,7 @@ const JourneySection: React.FC = () => {
     width: '40px',
     height: '40px',
     borderRadius: '50%',
-    background: '#6c2bd9',
+    background: '#a259ff',
     color: '#0a192f',
     display: 'flex',
     alignItems: 'center',
@@ -133,7 +133,7 @@ const JourneySection: React.FC = () => {
   };
 
   const timelineSubtitleStyle = {
-    color: '#6c2bd9',
+    color: '#a259ff',
     marginBottom: '10px',
     fontSize: '0.9rem',
   };
@@ -145,7 +145,7 @@ const JourneySection: React.FC = () => {
   };
 
   const timelineDurationStyle = {
-    color: '#6c2bd9',
+    color: '#a259ff',
     fontSize: '0.8rem',
     marginBottom: '10px',
   };
@@ -185,7 +185,7 @@ const JourneySection: React.FC = () => {
   return (
     <motion.section style={sectionStyle} variants={sectionVariants} initial="initial" animate="animate" id="journey">
       <Container>
-        <motion.h2 style={headingStyle}>My Journey</motion.h2>
+        <motion.h2 style={headingStyle}>My Career Journey</motion.h2>
         <ul style={timelineStyle}>
           {journeyData.map((item, index) => (
             <motion.li style={timelineItemStyle} key={index} variants={itemVariants}>

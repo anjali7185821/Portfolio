@@ -7,11 +7,10 @@ const NavigationBar = () => {
   // Styles
   const navbarStyle = {
     width: '100%',
-    backgroundColor: '#000', // Black background
+    backgroundColor: '#000', 
     transition: 'all 0.5s ease',
     boxShadow: '0px 0px 20px 5px rgba(162, 89, 255, 0.5)',
     zIndex: 999,
-
   };
 
   const brandStyle = {
@@ -20,6 +19,15 @@ const NavigationBar = () => {
     fontSize: '1.5rem',
     transition: 'color 0.3s ease',
     textDecoration: 'none',
+    display: 'flex',
+    alignItems: 'center', 
+  };
+
+  const logoStyle = {
+    width: '35px', 
+    height: '35px',
+    marginRight: '10px',
+    borderRadius: '50%', 
   };
 
   const navLinkStyle = {
@@ -32,13 +40,13 @@ const NavigationBar = () => {
   };
 
   const navLinkHoverStyle = {
-    color: '#a259ff', // Light purple on hover
+    color: '#a259ff', 
     transform: 'scale(1.1)',
   };
 
   const toggleButtonStyle = {
     border: 'none',
-    backgroundColor: 'transparent', // Transparent background
+    backgroundColor: 'transparent', 
     outline: 'none',
   };
 
@@ -54,6 +62,7 @@ const NavigationBar = () => {
     <Navbar expand="lg" style={navbarStyle} sticky="top">
       <Container fluid>
         <Navbar.Brand href="/" style={brandStyle}>
+          <img src="/images/pic.jpg" alt="Logo" style={logoStyle} /> 
           Anjali Kumari Singh
         </Navbar.Brand>
 

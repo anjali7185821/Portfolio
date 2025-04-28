@@ -49,7 +49,7 @@ const AboutSection = () => {
                 About Me
               </motion.h2>
               <motion.p variants={textVariants}>
-                Hi, I’m Anjali Kumari Singh, a passionate Full Stack Developer with expertise in both frontend and backend technologies. I specialize in building dynamic, responsive web applications that provide exceptional user experiences. With strong proficiency in tools like React, Vue.js, Node.js, Express, and MongoDB, I create scalable, maintainable solutions tailored to meet client needs.
+                Hi, I’m Anjali Kumari Singh, a passionate Full Stack Developer with expertise in both frontend and backend technologies. I specialize in building dynamic, responsive web applications that provide exceptional user experiences. With strong proficiency in tools like React, Node.js, Express, and MongoDB, I create scalable, maintainable solutions tailored to meet client needs.
               </motion.p>
               <motion.p variants={textVariants}>
                 I thrive on tackling complex challenges, from crafting intuitive user interfaces to developing efficient server-side architectures. Whether it's designing beautiful UIs or implementing robust backend systems, I focus on building seamless, high-performance applications. My goal is to bridge the gap between user experience and technical functionality, ensuring that every project I work on runs smoothly and efficiently.

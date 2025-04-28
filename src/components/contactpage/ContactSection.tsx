@@ -1,8 +1,16 @@
-// src/components/Contact.tsx
-
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
-import { Container, Row, Col, Form, Button, Alert } from "react-bootstrap";
+import { Container, Row, Col, Form, Button, Alert, Spinner } from "react-bootstrap";
+import styled from 'styled-components';
+
+const StyledLink = styled.a`
+  text-decoration: none;
+  color: #fff;
+
+  &:hover {
+    color: #a259ff;
+  }
+`;
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -13,6 +21,7 @@ const Contact: React.FC = () => {
   });
   const [showAlert, setShowAlert] = useState(false);
   const [alertMessage, setAlertMessage] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -23,6 +32,7 @@ const Contact: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    setLoading(true);
 
     emailjs
       .send(
@@ -49,7 +59,10 @@ const Contact: React.FC = () => {
             setShowAlert(false);
           }, 5000); // Display for 3 seconds
         }
-      );
+      )
+      .finally(() => {
+        setLoading(false);
+      });
   };
 
   return (
@@ -79,16 +92,16 @@ const Contact: React.FC = () => {
           <Row>
             <Col md={5} className="mb-4 d-none d-md-block">
               <h5 className="mb-3">Contact Details</h5>
-              <p><i className="bi bi-envelope me-2"></i> anjali7185821@gmail.com</p>
-              <p><i className="bi bi-geo-alt me-2"></i> Dhanbad, Jharkhand</p>
+              <p><i className="bi bi-envelope me-2"></i> <StyledLink href="mailto:anjali7185821@gmail.com">anjali7185821@gmail.com</StyledLink></p>
+              <p><i className="bi bi-geo-alt me-2"></i> <StyledLink href="https://www.google.com/maps?q=Dhanbad,+Jharkhand" target="_blank" rel="noopener noreferrer">Dhanbad, Jharkhand</StyledLink></p>
 
               <h5 className="mt-4 mb-3">Connect With Me</h5>
               <div className="d-flex gap-3">
                 <style>
                   {`
                     .btn-dark:hover {
-                      background-color: #6c2bd9 !important;
-                      border-color: #6c2bd9 !important;
+                      background-color: #a259ff !important;
+                      border-color: #a259ff !important;
                     }
                   `}
                 </style>
@@ -112,7 +125,7 @@ const Contact: React.FC = () => {
                       opacity: 1;
                     }
                     .form-control:focus {
-                      border-color: #6c2bd9 !important;
+                      border-color: #a259ff !important;
                       box-shadow: 0 0 0 0.25rem rgba(108, 43, 217, 0.25) !important;
                     }
                   `}
@@ -175,10 +188,17 @@ const Contact: React.FC = () => {
                     variant="primary" 
                     type="submit" 
                     className="w-100"
-                    style={{ backgroundColor: '#6c2bd9', borderColor: '#6c2bd9' }}
-                    disabled={!formData.name || !formData.email || !formData.subject || !formData.message}
+                    style={{ backgroundColor: '#a259ff', borderColor: '#a259ff' }}
+                    disabled={!formData.name || !formData.email || !formData.subject || !formData.message || loading}
                   >
-                    Send Message <i className="bi bi-send ms-2"></i>
+                    {loading ? (
+                      <>
+                        <Spinner animation="border" size="sm" className="me-2" />
+                        Sending...
+                      </>
+                    ) : (
+                      <>Send Message <i className="bi bi-send ms-2"></i></>
+                    )}
                   </Button>
                 </div>
               </Form>

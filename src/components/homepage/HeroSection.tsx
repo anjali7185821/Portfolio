@@ -1,10 +1,11 @@
 import { Container, Row, Col} from 'react-bootstrap';
 import { TypeAnimation } from 'react-type-animation';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
   const sectionStyle = {
-    background: 'linear-gradient(-45deg, #6c2bd9, #000, #6c2bd9)',
+    background: 'linear-gradient(-45deg, #000, #000, #6c2bd9)',
     color: '#fff',
     minHeight: '90vh',
     display: 'flex',
@@ -22,9 +23,9 @@ const HeroSection = () => {
   };
 
   const subtitleStyle = {
-    color: '#a259ff',
+    color: 'rgb(129, 62, 244)',
     fontSize: '2rem',
-    fontWeight: '600',
+    fontWeight: '700',
     marginBottom: '20px',
     transition: 'all 0.5s ease',
   };
@@ -122,7 +123,7 @@ const HeroSection = () => {
                 initial="initial"
                 animate="animate"
               >
-                <motion.h1 style={titleStyle} variants={itemVariants}>Hello,<br/> I'm Anjali Kumari Singh</motion.h1>
+                <motion.h1 style={titleStyle} variants={itemVariants}>Hello,<br/> I'm <span style={{ color: '#a259ff' }}>Anjali Kumari Singh</span></motion.h1>
 
                 <motion.h2 style={subtitleStyle} variants={itemVariants}>
                   <TypeAnimation
@@ -146,14 +147,16 @@ const HeroSection = () => {
 
                 {/* BUTTONS MOVED HERE */}
                 <motion.div variants={itemVariants}>
-                  <motion.button
-                    style={buttonStyleSecondary}
-                    variants={buttonVariants}
-                    whileHover="hoverSecondary"
-                    whileTap="tapSecondary"
-                  >
-                    View Projects
-                  </motion.button>
+                  <Link to="/projects">
+                    <motion.button
+                      style={buttonStyleSecondary}
+                      variants={buttonVariants}
+                      whileHover="hoverSecondary"
+                      whileTap="tapSecondary"
+                    >
+                      View Projects
+                    </motion.button>
+                  </Link>
 
                   <motion.button
                     style={buttonStyleSecondary}
