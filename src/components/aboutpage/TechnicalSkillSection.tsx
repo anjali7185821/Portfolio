@@ -96,7 +96,7 @@ const TechnicalSkills = () => {
   return (
     <section style={sectionStyle} id="skills">
       <Container>
-        <motion.h2 className="text-center mb-5" variants={skillGroupVariants}>
+        <motion.h2 className="text-center mb-5" variants={skillGroupVariants} style={{color: '#a259ff'}}>
           Technical Skills
         </motion.h2>
         <Row as={motion.div} variants={containerVariants}>
