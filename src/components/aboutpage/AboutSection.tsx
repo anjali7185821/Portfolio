@@ -45,7 +45,7 @@ const AboutSection = () => {
         <Container fluid>
           <Row className="justify-content-center align-items-center">
             <Col md={6} className="text-center text-md-start order-md-first order-last">
-              <motion.h2 className="mb-4 d-none d-md-block" variants={textVariants}>
+              <motion.h2 className="mb-4 d-none d-md-block" variants={textVariants} style={{color: ' #a259ff'}}>
                 About Me
               </motion.h2>
               <motion.p variants={textVariants}>
@@ -63,18 +63,25 @@ const AboutSection = () => {
             </Col>
             <Col md={4} className="text-center order-md-last order-first mb-4 mb-md-0">
               <motion.div
-                style={{ borderRadius: '8px', overflow: 'hidden', display: 'inline-block' }}
+                style={{ 
+                  borderRadius: '8px', 
+                  overflow: 'hidden', 
+                  display: 'inline-block',
+                  maxWidth: '300px',
+                  width: '100%',
+  
+                }}
                 variants={imageVariants}
                 whileHover="hover"
               >
                 <Image
-                  src="/images/pic.jpg"
-                  alt="John Doe"
+                  src="/images/pic-2.png"
+                  alt="Anjali Kumari Singh"
                   fluid
                 />
               </motion.div>
               <motion.div className="mt-3" variants={captionVariants}>
-                <h6 className="text-light mb-0 d-md-block d-none">Anjali Kumari Singh</h6>
+                <h6 className="text-light mb-0 d-md-block d-none fw-bold" style={{color: '#a259ff'}}>Anjali Kumari Singh</h6>
                 <p className="text-light mb-0 d-md-block d-none">Full Stack Developer</p>
               </motion.div>
             </Col>

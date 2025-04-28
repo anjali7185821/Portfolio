@@ -83,7 +83,7 @@ const HeroSection = () => {
 
   const handleDownloadCV = () => {
     // Replace 'path/to/your/cv.pdf' with the actual path to your CV file
-    const cvPath = '/files/CV_TCS.pdf';
+    const cvPath = '/files/UpdatedCV.pdf';
 
     // Create a temporary link element
     const link = document.createElement('a');
